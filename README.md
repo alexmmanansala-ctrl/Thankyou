@@ -13,12 +13,11 @@ Everything lives in one file, **`index.html`**. Logos and images go in the **`im
 
 ## Placeholders to fill in
 
-Every placeholder is written in square brackets, like `[BOOKING_URL]`. Search `index.html`
+Every placeholder is written in square brackets, like `[GOOGLE_REVIEW_URL]`. Search `index.html`
 for the name and replace the whole thing, brackets included, with your real value.
 
 | Placeholder | What to put there | How many | Example of the format |
 |---|---|---|---|
-| `[BOOKING_URL]` | Your online booking/scheduling link | 8 (all "Book" buttons) | `https://...` |
 | `[HOMEPAGE_GUIDE_URL]` | The PTPHomePage step-by-step guide | 1 | `https://...` |
 | `[PTPCONNECTS_URL]` | Your PTPConnects link | 1 | `https://...` |
 | `[CE_CLASSES_URL]` | Page listing your upcoming CE classes for agents | 1 | `https://...` |
@@ -26,10 +25,10 @@ for the name and replace the whole thing, brackets included, with your real valu
 | `[FACEBOOK_URL]` | Your Facebook page | 1 | `https://www.facebook.com/...` |
 | `[INSTAGRAM_URL]` | Your Instagram profile | 1 | `https://www.instagram.com/...` |
 
-**About `[BOOKING_URL]`:** all 8 "Book" buttons use the same placeholder. If you have one
-booking link for everything, replace all 8 at once. If you have a separate link for each
-service, replace them one at a time. Each button is right under the service it books
-(Sewer scope, Radon, Meth, Mold, Air quality, Foundation survey, Infrared, and the agent section).
+**Booking link (already set):** all 8 "Book" buttons go to
+`https://jaredfennteam.pillartopost.com/fbo-booking/`. To send a service somewhere else
+later, search `index.html` for `fbo-booking` and change that one button. Each button sits
+right under the service it books.
 
 **About the Google review link:** in your Google Business Profile, click **Ask for reviews**
 (or **Get more reviews**) and copy the link it gives you.
@@ -78,7 +77,7 @@ fill them in and push the update.
    in your browser.
 2. Click `index.html` in the file list on the left.
 3. Press **Ctrl+H** (Windows) or **Cmd+Option+F** (Mac) to open Find & Replace.
-4. Type a placeholder in the first box (for example `[BOOKING_URL]`) and your real link in the
+4. Type a placeholder in the first box (for example `[GOOGLE_REVIEW_URL]`) and your real link in the
    second box. Then click **Replace All**, or replace one at a time.
 5. When you're done, click the **Source Control** icon on the far left (it looks like a branch).
    Type a short note like "Add real links", then click **Commit & Push**.
