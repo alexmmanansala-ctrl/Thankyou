@@ -6,32 +6,36 @@ It will replace the Constant Contact page at **thankyou.jaredfennteam.com**.
 Everything lives in one file, **`index.html`**. Logos and images go in the **`images/`** folder.
 
 - To put the page online, see **[HOSTING.md](HOSTING.md)**.
-- Brand colors, logo, and link-preview image are already set (see below).
-- Before it goes live, fill in the remaining link placeholders.
+- Brand colors, logo, link-preview image, and all links are set, except **one**:
+  the PTPHomePage guide link (see below).
 
 ---
 
-## Placeholders to fill in
+## Placeholder to fill in
 
-Every placeholder is written in square brackets, like `[GOOGLE_REVIEW_URL]`. Search `index.html`
-for the name and replace the whole thing, brackets included, with your real value.
+Only one is left, written in square brackets in `index.html`:
 
-| Placeholder | What to put there | How many | Example of the format |
-|---|---|---|---|
-| `[HOMEPAGE_GUIDE_URL]` | The PTPHomePage step-by-step guide | 1 | `https://...` |
-| `[PTPCONNECTS_URL]` | Your PTPConnects link | 1 | `https://...` |
-| `[CE_CLASSES_URL]` | Page listing your upcoming CE classes for agents | 1 | `https://...` |
-| `[GOOGLE_REVIEW_URL]` | Your Google "write a review" link | 1 | `https://g.page/r/...` |
-| `[FACEBOOK_URL]` | Your Facebook page | 1 | `https://www.facebook.com/...` |
-| `[INSTAGRAM_URL]` | Your Instagram profile | 1 | `https://www.instagram.com/...` |
+| Placeholder | What to put there |
+|---|---|
+| `[HOMEPAGE_GUIDE_URL]` | Link to the PTPHomePage step-by-step guide (the "Open the step-by-step guide" button under the video) |
 
-**Booking link (already set):** all 8 "Book" buttons go to
-`https://jaredfennteam.pillartopost.com/fbo-booking/`. To send a service somewhere else
-later, search `index.html` for `fbo-booking` and change that one button. Each button sits
-right under the service it books.
+Search `index.html` for `[HOMEPAGE_GUIDE_URL]` and replace the whole thing, brackets
+included, with the real link.
 
-**About the Google review link:** in your Google Business Profile, click **Ask for reviews**
-(or **Get more reviews**) and copy the link it gives you.
+### Links already set
+
+| Button / link | Goes to |
+|---|---|
+| All 8 "Book" buttons | https://jaredfennteam.pillartopost.com/fbo-booking/ |
+| PTPConnects "Call 833-242-9846" | Dials 833-242-9846 |
+| Upcoming CE classes | https://www.jotform.com/form/253055902294457 |
+| Leave a Google review | https://g.page/r/CSsFhEzRfLVyEAI/review |
+| Facebook | https://www.facebook.com/jaredfennteam |
+| Instagram | https://www.instagram.com/jaredfenn.ptp |
+| PTPHomePage intro video | https://vimeo.com/1052152309 |
+
+To change one later, search `index.html` for part of the old link (for example
+`fbo-booking` or `jotform`) and edit it there.
 
 ---
 
@@ -77,7 +81,7 @@ fill them in and push the update.
    in your browser.
 2. Click `index.html` in the file list on the left.
 3. Press **Ctrl+H** (Windows) or **Cmd+Option+F** (Mac) to open Find & Replace.
-4. Type a placeholder in the first box (for example `[GOOGLE_REVIEW_URL]`) and your real link in the
+4. Type a placeholder in the first box (for example `[HOMEPAGE_GUIDE_URL]`) and your real link in the
    second box. Then click **Replace All**, or replace one at a time.
 5. When you're done, click the **Source Control** icon on the far left (it looks like a branch).
    Type a short note like "Add real links", then click **Commit & Push**.
@@ -106,7 +110,7 @@ To upload images, go to the `images` folder on github.com and choose
 2. **Your report:** check email/spam, Text/Call buttons, PTPHomePage video and guide
 3. **Still in your due diligence period?** Sewer scope, Radon, and Meth testing (Book + Call)
 4. **More services:** Mold, Air quality, Foundation elevation survey, Infrared (tap to expand)
-5. **Moving in?** PTPConnects in three steps
+5. **Moving in?** PTPConnects in three steps, with a button that calls 833-242-9846
 6. **For agents** (`#agents`): book add-ons, share/copy the page link, call/text Jared, CE classes
 7. **Review + referral:** Google review button, plus "Share our info" for friends who are buying or selling
 8. **Footer:** phone, email, website, office address, Facebook, Instagram
