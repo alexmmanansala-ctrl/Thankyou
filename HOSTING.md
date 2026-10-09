@@ -25,9 +25,10 @@ at the end.
 
 ## Part 1: Get the page ready on GitHub (10 minutes)
 
-### 1. Fill in the placeholders first
-Follow the checklist in [README.md](README.md) (the remaining links; colors, logo, and preview image are already done).
-You can also do this after the site is live. Every edit updates the live page.
+### 1. Check the page content
+All links, colors, and images are already filled in. Skim the "Final check" list in
+[README.md](README.md). You can also make edits after the site is live; every edit updates
+the live page.
 
 ### 2. Put the page on a branch called `main`
 Right now the files are on a branch named `claude/inspection-thankyou-page-yj2w6x`.

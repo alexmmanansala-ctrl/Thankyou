@@ -6,23 +6,11 @@ It will replace the Constant Contact page at **thankyou.jaredfennteam.com**.
 Everything lives in one file, **`index.html`**. Logos and images go in the **`images/`** folder.
 
 - To put the page online, see **[HOSTING.md](HOSTING.md)**.
-- Brand colors, logo, link-preview image, and all links are set, except **one**:
-  the PTPHomePage guide link (see below).
+- Brand colors, logo, link-preview image, and all links are set. No placeholders remain.
 
 ---
 
-## Placeholder to fill in
-
-Only one is left, written in square brackets in `index.html`:
-
-| Placeholder | What to put there |
-|---|---|
-| `[HOMEPAGE_GUIDE_URL]` | Link to the PTPHomePage step-by-step guide (the "Open the step-by-step guide" button under the video) |
-
-Search `index.html` for `[HOMEPAGE_GUIDE_URL]` and replace the whole thing, brackets
-included, with the real link.
-
-### Links already set
+## Links
 
 | Button / link | Goes to |
 |---|---|
@@ -33,6 +21,7 @@ included, with the real link.
 | Facebook | https://www.facebook.com/jaredfennteam |
 | Instagram | https://www.instagram.com/jaredfenn.ptp |
 | PTPHomePage intro video | https://vimeo.com/1052152309 |
+| PTPHomePage step-by-step guide | `files/PTPHomePage-Step-by-Step-Guide.pdf` (stored with the page; to update it, upload a new PDF with the same name to the `files` folder) |
 
 To change one later, search `index.html` for part of the old link (for example
 `fbo-booking` or `jotform`) and edit it there.
@@ -81,7 +70,7 @@ fill them in and push the update.
    in your browser.
 2. Click `index.html` in the file list on the left.
 3. Press **Ctrl+H** (Windows) or **Cmd+Option+F** (Mac) to open Find & Replace.
-4. Type a placeholder in the first box (for example `[HOMEPAGE_GUIDE_URL]`) and your real link in the
+4. Type the old text or link in the first box and the new one in the
    second box. Then click **Replace All**, or replace one at a time.
 5. When you're done, click the **Source Control** icon on the far left (it looks like a branch).
    Type a short note like "Add real links", then click **Commit & Push**.
