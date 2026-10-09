@@ -15,27 +15,30 @@
   <meta property="og:title" content="Your Inspection Resources – Jared Fenn Team">
   <meta property="og:description" content="Your report, next steps, and helpful services after your home inspection.">
   <meta property="og:url" content="https://thankyou.jaredfennteam.com/">
-  <meta property="og:image" content="[OG_IMAGE_URL]">
-  <meta property="og:image:alt" content="Jared Fenn Team">
+  <meta property="og:image" content="https://thankyou.jaredfennteam.com/images/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="The Jared Fenn Team, Pillar To Post Home Inspectors">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Your Inspection Resources – Jared Fenn Team">
   <meta name="twitter:description" content="Your report, next steps, and helpful services after your home inspection.">
-  <meta name="twitter:image" content="[OG_IMAGE_URL]">
+  <meta name="twitter:image" content="https://thankyou.jaredfennteam.com/images/og-image.png">
 
   <style>
     :root {
       /* ===== BRAND SETTINGS =====
-         The grays below are temporary PLACEHOLDERS, not brand colors.
-         Replace each color code with your real one (see README.md). */
-      --brand-primary: #2f2f2f;    /* [BRAND_PRIMARY] buttons, links, footer. Must be dark enough for white text. */
-      --brand-accent: #9a9a9a;     /* [BRAND_ACCENT] decorative stripes and bars only (no text sits on it) */
-      --on-brand-primary: #ffffff; /* text on top of the primary color */
+         Sampled from the Pillar To Post / Jared Fenn Team logo and website. */
+      --brand-primary: #013a81;    /* navy (logo): headings, links, outline buttons, footer */
+      --brand-accent: #7ac143;     /* green (logo): decorative stripes and bars only, no text on it */
+      --brand-cta: #4aa640;        /* green of the website's "Book Online Now" buttons: main action buttons */
+      --on-brand-primary: #ffffff; /* text on navy */
+      --on-brand-cta: #111111;     /* dark text on green buttons, as on the website */
 
-      --text: #1b1b1b;
-      --text-muted: #454545;
-      --bg: #f4f3f0;
+      --text: #1b1f24;
+      --text-muted: #46505c;
+      --bg: #f3f5f8;
       --surface: #ffffff;
-      --border: #d6d4cf;
+      --border: #d3dae4;
       --radius: 14px;
       --gutter: 1rem;
     }
@@ -58,7 +61,7 @@
     }
 
     img, svg, iframe { display: block; max-width: 100%; }
-    h1, h2, h3 { line-height: 1.25; margin: 0 0 0.5em; text-wrap: balance; }
+    h1, h2, h3 { line-height: 1.25; margin: 0 0 0.5em; text-wrap: balance; color: var(--brand-primary); }
     p { margin: 0 0 1em; }
     ul, ol { margin: 0; padding: 0; }
 
@@ -88,10 +91,12 @@
       border-top: 6px solid var(--brand-accent);
       border-bottom: 1px solid var(--border);
     }
-    .brand { display: flex; align-items: center; gap: 0.875rem; padding-top: 1rem; padding-bottom: 1rem; }
-    .logo { height: 3.5rem; width: auto; max-width: 9rem; object-fit: contain; }
-    .brand-name { margin: 0; font-size: 1.375rem; font-weight: 800; line-height: 1.2; }
-    .tagline { margin: 0; font-size: 1rem; color: var(--text-muted); }
+    .brand {
+      display: flex; flex-direction: column; align-items: center; gap: 0.375rem;
+      padding-top: 1.25rem; padding-bottom: 1rem; text-align: center;
+    }
+    .logo { width: 15rem; max-width: 80%; height: auto; }
+    .tagline { margin: 0; font-size: 1rem; font-weight: 600; letter-spacing: 0.02em; color: var(--text-muted); }
 
     /* ---------- Intro ---------- */
     .intro { padding-top: 1.75rem; }
@@ -139,10 +144,10 @@
       font: inherit; font-weight: 700; line-height: 1.2; text-align: center; text-decoration: none;
       cursor: pointer;
     }
-    .btn-primary { background: var(--brand-primary); color: var(--on-brand-primary); }
+    .btn-primary { background: var(--brand-cta); border-color: var(--brand-cta); color: var(--on-brand-cta); }
     .btn-secondary { background: var(--surface); color: var(--brand-primary); }
     @media (hover: hover) {
-      .btn-primary:hover { box-shadow: inset 0 0 0 999px rgba(255, 255, 255, 0.14); }
+      .btn-primary:hover { box-shadow: inset 0 0 0 999px rgba(255, 255, 255, 0.18); }
       .btn-secondary:hover, .jump a:hover { background: var(--bg); }
     }
     .btn-block { display: flex; width: 100%; }
@@ -165,7 +170,7 @@
 
     .video {
       position: relative; aspect-ratio: 16 / 9; margin-bottom: 0.75rem;
-      border-radius: var(--radius); overflow: hidden; background: #1b1b1b;
+      border-radius: var(--radius); overflow: hidden; background: var(--brand-primary);
     }
     @supports not (aspect-ratio: 1) {
       .video { height: 0; padding-top: 56.25%; }
@@ -174,12 +179,12 @@
     .video-facade {
       display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 0.75rem;
       padding: 1rem; text-align: center; text-decoration: none; font-weight: 700; color: #fff;
-      background: linear-gradient(135deg, var(--brand-primary), #151515);
+      background: linear-gradient(135deg, var(--brand-primary), #00244f);
     }
     .play-btn {
       width: 4.5rem; height: 4.5rem; border-radius: 50%;
       display: grid; place-items: center;
-      background: #fff; color: #1b1b1b;
+      background: #fff; color: var(--brand-primary);
       box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
     }
     .play-btn .icon { width: 2rem; height: 2rem; margin-left: 0.25rem; fill: currentColor; stroke: none; }
@@ -209,7 +214,7 @@
       background: linear-gradient(var(--brand-primary), var(--brand-primary)) center / 0.875rem 2px no-repeat;
     }
     .summary-text { flex: 1; }
-    .summary-title { display: block; font-size: 1.1875rem; font-weight: 700; line-height: 1.3; }
+    .summary-title { display: block; font-size: 1.1875rem; font-weight: 700; line-height: 1.3; color: var(--brand-primary); }
     .summary-hint { display: block; font-size: 1rem; color: var(--text-muted); line-height: 1.4; margin-top: 0.125rem; }
     .details-body { padding: 0 1.25rem 1.25rem; }
     .details-body .btn { margin-top: 0.25rem; }
@@ -225,7 +230,7 @@
       display: grid; place-items: center;
       background: var(--brand-primary); color: var(--on-brand-primary); font-weight: 800;
     }
-    .steps strong { display: block; font-size: 1.1875rem; }
+    .steps strong { display: block; font-size: 1.1875rem; color: var(--brand-primary); }
 
     /* ---------- Review ---------- */
     .review-card { text-align: center; }
@@ -236,7 +241,7 @@
       margin-top: 3rem; padding: 2.25rem 0 2.75rem;
       background: var(--brand-primary); color: var(--on-brand-primary);
     }
-    .site-footer h2 { font-size: 1.5rem; }
+    .site-footer h2 { font-size: 1.5rem; color: inherit; }
     .site-footer a { color: inherit; }
     .site-footer :focus-visible { outline-color: var(--on-brand-primary); }
     .site-footer address { font-style: normal; }
@@ -277,14 +282,8 @@
 
   <header class="site-header">
     <div class="wrap brand">
-      <!-- [LOGO_FILE]: path to your logo, e.g. images/logo.png. The alt is empty
-           on purpose because the team name is written right next to it.
-           If the file is missing, the logo simply hides itself. -->
-      <img class="logo" src="[LOGO_FILE]" alt="" onerror="this.hidden=true">
-      <div>
-        <p class="brand-name">Jared Fenn Team</p>
-        <p class="tagline">Your Lifetime Home Partner</p>
-      </div>
+      <img class="logo" src="images/logo.png" width="720" height="270" alt="The Jared Fenn Team, Pillar To Post Home Inspectors">
+      <p class="tagline">Your Lifetime Home Partner</p>
     </div>
   </header>
 

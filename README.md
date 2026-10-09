@@ -6,7 +6,8 @@ It will replace the Constant Contact page at **thankyou.jaredfennteam.com**.
 Everything lives in one file, **`index.html`**. Logos and images go in the **`images/`** folder.
 
 - To put the page online, see **[HOSTING.md](HOSTING.md)**.
-- Before it goes live, fill in the placeholders below.
+- Brand colors, logo, and link-preview image are already set (see below).
+- Before it goes live, fill in the remaining link placeholders.
 
 ---
 
@@ -24,10 +25,6 @@ for the name and replace the whole thing, brackets included, with your real valu
 | `[GOOGLE_REVIEW_URL]` | Your Google "write a review" link | 1 | `https://g.page/r/...` |
 | `[FACEBOOK_URL]` | Your Facebook page | 1 | `https://www.facebook.com/...` |
 | `[INSTAGRAM_URL]` | Your Instagram profile | 1 | `https://www.instagram.com/...` |
-| `[LOGO_FILE]` | Path to your logo file (inside `src="..."`) | 1 (plus a mention in a comment) | `images/logo.png` |
-| `[OG_IMAGE_URL]` | **Full web address** of the image shown in text-message link previews | 2 (`og:image` and `twitter:image`) | `https://thankyou.jaredfennteam.com/images/preview.jpg` |
-| `[BRAND_PRIMARY]` | Main brand color (see "Brand colors" below) | 1 | `#RRGGBB` |
-| `[BRAND_ACCENT]` | Accent brand color | 1 | `#RRGGBB` |
 
 **About `[BOOKING_URL]`:** all 8 "Book" buttons use the same placeholder. If you have one
 booking link for everything, replace all 8 at once. If you have a separate link for each
@@ -39,45 +36,41 @@ service, replace them one at a time. Each button is right under the service it b
 
 ---
 
-## Brand colors
+## Brand colors (already set)
 
-Near the top of `index.html` you'll see:
+These were sampled directly from your Pillar To Post / Jared Fenn Team logo and website, and
+they live near the top of `index.html`:
 
-```css
---brand-primary: #2f2f2f;    /* [BRAND_PRIMARY] ... */
---brand-accent: #9a9a9a;     /* [BRAND_ACCENT] ... */
-```
+| Setting | Color | Where it's used |
+|---|---|---|
+| `--brand-primary` | `#013a81` navy (logo) | Headings, links, outlined buttons, numbered steps, footer |
+| `--brand-accent` | `#7ac143` green (logo) | Thin stripe at the top and the bars beside section headings |
+| `--brand-cta` | `#4aa640` green (website's "Book Online Now" button) | Main action buttons (Book, Text us, Share, etc.) with dark text, like the website |
 
-The grays are **temporary placeholders, not brand colors**. Replace only the color code
-(the part that starts with `#`) with your brand's code. You can leave the comment as it is.
-
-- **Primary** is used for buttons, links, the numbered steps, and the footer, always with
-  **white text on top**. It needs to be a fairly dark color so the white text stays readable.
-  Paste your color into a free contrast checker (search "WebAIM contrast checker") with white
-  (`#FFFFFF`) and make sure it says at least **4.5:1**. If it doesn't, use a darker shade
-  of your brand color.
-- **Accent** is only used for decorative stripes (the bar at the very top and the bars next to
-  section headings), so any brand color works there.
+All text/background pairs pass the WCAG AA contrast standard (white on navy is about 11:1,
+and dark text on the green buttons is about 6:1). If you ever change a color, change only
+the code that starts with `#`, and run it through a contrast checker (search "WebAIM
+contrast checker"). Normal-size text needs at least **4.5:1**.
 
 ---
 
 ## Images
 
-Put image files in the `images/` folder. See [`images/README.md`](images/README.md) for sizes.
+Both images are already in the `images/` folder. See [`images/README.md`](images/README.md)
+for details and how to swap them.
 
-- **Logo:** upload it as, for example, `images/logo.png`, then set `src="images/logo.png"` where
-  `[LOGO_FILE]` was. It appears at the top next to "Jared Fenn Team". If the logo file is
-  missing, the page just shows the team name. It won't show a broken image.
-- **Link-preview image:** this is what shows up in the text bubble when you send the link.
-  Upload it (for example `images/preview.jpg`) and set **both** `[OG_IMAGE_URL]` spots to the
-  **full** address: `https://thankyou.jaredfennteam.com/images/preview.jpg`. A short path like
-  `images/preview.jpg` will **not** work for previews.
+- **`images/logo.png`**: your "Pillar To Post Home Inspectors / The Jared Fenn Team" logo,
+  trimmed and with a transparent background, shown at the top of the page.
+- **`images/og-image.png`**: the 1200 × 630 picture that shows in the text bubble when you
+  send the link (your logo on white with a green stripe). The page points to it by its full
+  address, `https://thankyou.jaredfennteam.com/images/og-image.png`, so the preview starts
+  working once the page is live at that address.
 
 ---
 
 ## Easiest way to fill everything in
 
-**Option A: send them to Claude.** Gather the links, colors, and images, and ask Claude to
+**Option A: send them to Claude.** Gather the links and ask Claude to
 fill them in and push the update.
 
 **Option B: do it yourself on GitHub (no software needed).**
