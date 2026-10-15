@@ -16,8 +16,7 @@ Everything lives in one file, **`index.html`**. Logos and images go in the **`im
 |---|---|
 | All 8 "Book" buttons | https://jaredfennteam.pillartopost.com/fbo-booking/ |
 | PTPConnects "Call 833-242-9846" | Dials 833-242-9846 |
-| "Reach out to Jared directly" (agent section) | Jared's direct line, 801-318-4343 |
-| Everything else (report section, Call buttons on services, referral, footer) | Company line, 801-318-9909 |
+| All phone numbers on the page | Company line, 801-318-9909 |
 | Upcoming CE classes | https://www.jotform.com/form/253055902294457 |
 | Leave a Google review | https://g.page/r/CSsFhEzRfLVyEAI/review |
 | Facebook | https://www.facebook.com/jaredfennteam |
@@ -104,7 +103,7 @@ To upload images, go to the `images` folder on github.com and choose
 3. **Still in your due diligence period?** Sewer scope, Radon, and Meth testing (Book + Call)
 4. **More services:** Mold, Air quality, Foundation elevation survey, Infrared (tap to expand)
 5. **Moving in?** PTPConnects in three steps, with a button that calls 833-242-9846
-6. **For agents** (`#agents`): book add-ons, share/copy the page link, call/text Jared's direct line (801-318-4343), CE classes
+6. **For agents** (`#agents`): book add-ons, share/copy the page link, CE classes
 7. **Review + referral:** Google review button, plus "Share our info" for friends who are buying or selling
 8. **Footer:** phone, email, website, office address, Facebook, Instagram
 
