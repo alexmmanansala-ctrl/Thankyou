@@ -16,8 +16,8 @@ Everything lives in one file, **`index.html`**. Logos and images go in the **`im
 |---|---|
 | All 8 "Book" buttons | https://jaredfennteam.pillartopost.com/fbo-booking/ |
 | PTPConnects "Call 833-242-9846" | Dials 833-242-9846 |
-| "Reach out to Jared directly" (report section and agent section) | Jared's direct line, 801-318-4343 |
-| Everything else (Call buttons on services, referral, footer) | Company line, 801-318-9909 |
+| "Reach out to Jared directly" (agent section) | Jared's direct line, 801-318-4343 |
+| Everything else (report section, Call buttons on services, referral, footer) | Company line, 801-318-9909 |
 | Upcoming CE classes | https://www.jotform.com/form/253055902294457 |
 | Leave a Google review | https://g.page/r/CSsFhEzRfLVyEAI/review |
 | Facebook | https://www.facebook.com/jaredfennteam |
