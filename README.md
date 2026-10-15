@@ -48,15 +48,17 @@ contrast checker"). Normal-size text needs at least **4.5:1**.
 
 ## Images
 
-Both images are already in the `images/` folder. See [`images/README.md`](images/README.md)
-for details and how to swap them.
+All images are in the `images/` folder. See [`images/README.md`](images/README.md) for the
+full list and how to swap them.
 
 - **`images/logo.png`**: your "Pillar To Post Home Inspectors / The Jared Fenn Team" logo,
-  trimmed and with a transparent background, shown at the top of the page.
-- **`images/og-image.png`**: the 1200 × 630 picture that shows in the text bubble when you
-  send the link (your logo on white with a green stripe). The page points to it by its full
-  address, `https://thankyou.jaredfennteam.com/images/og-image.png`, so the preview starts
-  working once the page is live at that address.
+  shown at the top of the page.
+- **Photos**: Jared's headshot in the greeting, plus the sewer scope, radon, and truck
+  photos, all lightly color-graded to match.
+- **`images/og-image.jpg`**: the 1200 × 630 picture that shows in the text bubble when you
+  send the link (Jared by the truck). The page points to it by its full address,
+  `https://thankyou.jaredfennteam.com/images/og-image.jpg`, so the preview starts working
+  once the page is live at that address.
 
 ---
 
