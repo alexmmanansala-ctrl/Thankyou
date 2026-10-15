@@ -101,7 +101,18 @@
     /* ---------- Intro ---------- */
     .intro { padding-top: 1.75rem; }
     .intro h1 { font-size: 1.875rem; }
-    .signoff { font-style: italic; color: var(--text-muted); }
+    .note {
+      background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius);
+      padding: 1.25rem; box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
+    }
+    .note > :last-child { margin-bottom: 0; }
+    .note-from { display: flex; align-items: center; gap: 0.875rem; margin-bottom: 0.875rem; }
+    .avatar {
+      width: 4.5rem; height: 4.5rem; border-radius: 50%; object-fit: cover; flex: none;
+      border: 3px solid var(--brand-accent);
+    }
+    .note-name { margin: 0; font-size: 1.25rem; font-weight: 800; color: var(--brand-primary); line-height: 1.2; }
+    .note-role { margin: 0; font-size: 1rem; color: var(--text-muted); line-height: 1.35; }
 
     .jump { margin-top: 1.5rem; }
     .jump-label { margin: 0 0 0.5rem; font-size: 1rem; font-weight: 700; color: var(--text-muted); }
@@ -289,10 +300,17 @@
   <main id="main">
     <!-- 1. Greeting -->
     <section class="wrap intro" aria-labelledby="greeting">
-      <h1 id="greeting">Thanks for trusting us with your inspection today.</h1>
-      <p>Here's everything you need in one place: where to find your report, helpful next steps, and easy ways to reach us.</p>
-      <p>We help homeowners, not just homebuyers, so we're here for you long after closing day. This link will stay in your texts whenever you need it.</p>
-      <p class="signoff">— Jared &amp; the team</p>
+      <h1 id="greeting">Thanks for trusting us with your home inspection.</h1>
+      <div class="note">
+        <div class="note-from">
+          <img class="avatar" src="images/jared.jpg" width="240" height="240" alt="Jared Fenn">
+          <div>
+            <p class="note-name">Jared Fenn</p>
+            <p class="note-role">The Jared Fenn Team</p>
+          </div>
+        </div>
+        <p>Here's everything you need in one place. We help homeowners, not just homebuyers, so keep this link handy. We're here long after closing day.</p>
+      </div>
 
       <nav class="jump" aria-labelledby="jump-label">
         <p class="jump-label" id="jump-label">Jump to:</p>
@@ -314,8 +332,8 @@
         <div class="notice">
           <span class="notice-icon"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-mail"/></svg></span>
           <div>
-            <p><strong>It's in your email.</strong> Your full report was emailed to you from Pillar To Post. If you don't see it, check your spam or junk folder.</p>
-            <p>Can't find it? Text or call us at <a class="tel" href="tel:+18013189909">801-318-9909</a> and we'll help.</p>
+            <p><strong>It's in your email</strong> from Pillar To Post. Not there? Check your spam folder.</p>
+            <p>Still can't find it? Text or call <a class="tel" href="tel:+18013189909">801-318-9909</a>.</p>
           </div>
         </div>
         <div class="btn-pair">
@@ -329,7 +347,7 @@
       </div>
 
       <h3 class="subhead">Getting around PTPHomePage</h3>
-      <p>This intro video walks you through PTPHomePage. Prefer to read? Open the step-by-step guide below.</p>
+      <p>Watch the short intro, or open the step-by-step guide.</p>
       <div class="video">
         <!-- Tapping loads the Vimeo player. Without JavaScript, this opens the video on Vimeo. -->
         <a class="video-facade" href="https://vimeo.com/1052152309" data-vimeo-id="1052152309" data-title="PTPHomePage intro video">
@@ -346,11 +364,11 @@
     <!-- 3. Due diligence tests -->
     <section class="wrap section" id="before-closing" aria-labelledby="before-closing-title">
       <h2 id="before-closing-title">Still in your due diligence period?</h2>
-      <p class="lead">If you haven't closed yet, these tests are best done before closing, while there's still time to ask questions and plan.</p>
+      <p class="lead">These are best done before closing.</p>
 
       <article class="card" aria-labelledby="sewer-title">
         <h3 id="sewer-title">Sewer scope</h3>
-        <p>We run a camera through the main sewer line to look for cracks, blockages, and root intrusion. Aging pipes, shifting soil, and debris can all cause issues you can't see from inside the home.</p>
+        <p>A camera checks the main sewer line for cracks, blockages, and tree roots: problems you can't see from inside the home.</p>
         <div class="btn-pair">
           <a class="btn btn-primary" href="https://jaredfennteam.pillartopost.com/fbo-booking/" aria-label="Book a sewer scope online">
             <svg class="icon" aria-hidden="true" focusable="false"><use href="#i-calendar"/></svg>Book
@@ -363,7 +381,7 @@
 
       <article class="card" aria-labelledby="radon-title">
         <h3 id="radon-title">Radon testing</h3>
-        <p>About 1 in 3 Utah homes have elevated radon levels. Radon is a natural gas you can't see or smell, so testing is the only way to know. The EPA recommends testing at least every two years.</p>
+        <p>About 1 in 3 Utah homes have elevated radon. You can't see or smell it, so testing is the only way to know. The EPA recommends testing every two years.</p>
         <div class="btn-pair">
           <a class="btn btn-primary" href="https://jaredfennteam.pillartopost.com/fbo-booking/" aria-label="Book radon testing online">
             <svg class="icon" aria-hidden="true" focusable="false"><use href="#i-calendar"/></svg>Book
@@ -376,7 +394,7 @@
 
       <article class="card" aria-labelledby="meth-title">
         <h3 id="meth-title">Meth testing</h3>
-        <p>In Utah, meth contamination often comes from use or smoking rather than manufacturing, and residue can linger for years. A simple test before closing gives you peace of mind.</p>
+        <p>In Utah, contamination often comes from use or smoking, not manufacturing, and residue can linger for years. A quick test gives you peace of mind.</p>
         <div class="btn-pair">
           <a class="btn btn-primary" href="https://jaredfennteam.pillartopost.com/fbo-booking/" aria-label="Book meth testing online">
             <svg class="icon" aria-hidden="true" focusable="false"><use href="#i-calendar"/></svg>Book
@@ -391,7 +409,7 @@
     <!-- 4. More services (collapsible) -->
     <section class="wrap section" id="services" aria-labelledby="services-title">
       <h2 id="services-title">More services for your home</h2>
-      <p class="lead">Helpful now or down the road. Tap a service to learn more.</p>
+      <p class="lead">Tap a service to learn more.</p>
 
       <div class="service-list">
         <details>
@@ -460,11 +478,11 @@
     <section class="wrap section" id="moving-in" aria-labelledby="moving-in-title">
       <h2 id="moving-in-title">Moving in? Let PTPConnects help.</h2>
       <div class="card">
-        <p>PTPConnects is a free concierge service that helps you set up your utilities and home services.</p>
+        <p>A free concierge that sets up your utilities and home services.</p>
         <ol class="steps" role="list">
-          <li><strong>One call</strong>Call <a class="tel" href="tel:+18332429846">833-242-9846</a> and one person helps you get everything set up.</li>
-          <li><strong>Shop the best deals</strong>They help you compare providers so you get the best options for your new home.</li>
-          <li><strong>Save time and money</strong>Skip the dozen separate calls during an already busy move.</li>
+          <li><strong>One call</strong>One person sets everything up for you.</li>
+          <li><strong>Shop the best deals</strong>Compare providers in one place.</li>
+          <li><strong>Save time and money</strong>Skip a dozen separate calls.</li>
         </ol>
         <a class="btn btn-primary btn-block" href="tel:+18332429846" aria-label="Call 833-242-9846 to reach PTPConnects">
           <svg class="icon" aria-hidden="true" focusable="false"><use href="#i-phone"/></svg>Call 833-242-9846
