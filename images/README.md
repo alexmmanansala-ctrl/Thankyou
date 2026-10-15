@@ -6,11 +6,14 @@
 | `jared.jpg` | Jared's round photo in the greeting (240 × 240 px) |
 | `sewer-scope.jpg` | Photo on the Sewer scope card |
 | `radon-test.jpg` | Photo on the Radon testing card |
+| `meth-test.jpg` | Photo on the Meth testing card |
 | `team-trucks.jpg` | Photo above "Did we take good care of you?" |
 | `og-image.jpg` | The picture in the text-message bubble when you send the link (1200 × 630 px, Jared by the truck) |
 
-The photos have a light color grade (a bit more contrast, warm highlights, cool
-shadows, soft vignette) so they look consistent with each other.
+Card photos are 1200px wide so they stay sharp on high-resolution phones. The smaller
+originals (sewer scope, radon, trucks) were upscaled with an AI super-resolution model, then
+all photos were sharpened and lightly color-graded (more contrast, warm highlights, cool
+shadows, soft vignette) so they look consistent.
 
 ## Swapping an image
 

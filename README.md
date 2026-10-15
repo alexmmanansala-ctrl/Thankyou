@@ -16,6 +16,8 @@ Everything lives in one file, **`index.html`**. Logos and images go in the **`im
 |---|---|
 | All 8 "Book" buttons | https://jaredfennteam.pillartopost.com/fbo-booking/ |
 | PTPConnects "Call 833-242-9846" | Dials 833-242-9846 |
+| "Reach out to Jared directly" (report section and agent section) | Jared's direct line, 801-318-4343 |
+| Everything else (Call buttons on services, referral, footer) | Company line, 801-318-9909 |
 | Upcoming CE classes | https://www.jotform.com/form/253055902294457 |
 | Leave a Google review | https://g.page/r/CSsFhEzRfLVyEAI/review |
 | Facebook | https://www.facebook.com/jaredfennteam |
@@ -53,8 +55,8 @@ full list and how to swap them.
 
 - **`images/logo.png`**: your "Pillar To Post Home Inspectors / The Jared Fenn Team" logo,
   shown at the top of the page.
-- **Photos**: Jared's headshot in the greeting, plus the sewer scope, radon, and truck
-  photos, all lightly color-graded to match.
+- **Photos**: Jared's headshot in the greeting, plus the sewer scope, radon, meth testing,
+  and truck photos. All are 1200px wide, sharpened, and lightly color-graded to match.
 - **`images/og-image.jpg`**: the 1200 × 630 picture that shows in the text bubble when you
   send the link (Jared by the truck). The page points to it by its full address,
   `https://thankyou.jaredfennteam.com/images/og-image.jpg`, so the preview starts working
@@ -102,7 +104,7 @@ To upload images, go to the `images` folder on github.com and choose
 3. **Still in your due diligence period?** Sewer scope, Radon, and Meth testing (Book + Call)
 4. **More services:** Mold, Air quality, Foundation elevation survey, Infrared (tap to expand)
 5. **Moving in?** PTPConnects in three steps, with a button that calls 833-242-9846
-6. **For agents** (`#agents`): book add-ons, share/copy the page link, call/text Jared, CE classes
+6. **For agents** (`#agents`): book add-ons, share/copy the page link, call/text Jared's direct line (801-318-4343), CE classes
 7. **Review + referral:** Google review button, plus "Share our info" for friends who are buying or selling
 8. **Footer:** phone, email, website, office address, Facebook, Instagram
 
