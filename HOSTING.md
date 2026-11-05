@@ -124,7 +124,7 @@ This stops anyone else's GitHub account from ever claiming your address.
 ## Part 3: Test it
 
 - [ ] `https://thankyou.jaredfennteam.com` opens the new page on your phone.
-- [ ] `https://thankyou.jaredfennteam.com/agents/` opens the agent version.
+- [ ] `https://thankyou.jaredfennteam.com/#agents` jumps straight to the agent section.
 - [ ] Text the link to yourself and check the preview. Phones remember old previews, so if
       you still see the Constant Contact one, text yourself
       `https://thankyou.jaredfennteam.com/?v=2` to see the fresh preview.

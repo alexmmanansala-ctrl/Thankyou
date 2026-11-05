@@ -3,10 +3,14 @@
 There are two versions, each sent as a text-message link after every inspection.
 They replace the Constant Contact page at **thankyou.jaredfennteam.com**.
 
-| Who | Link | File |
+| Version | Preview link | File |
 |---|---|---|
-| **Clients** | `https://thankyou.jaredfennteam.com/` | `index.html` |
-| **Agents** | `https://thankyou.jaredfennteam.com/agents/` | `agents/index.html` |
+| Current page (unchanged) | `https://alexmmanansala-ctrl.github.io/Thankyou/` | `index.html` |
+| **New client version (for review)** | `https://alexmmanansala-ctrl.github.io/Thankyou/client/` | `client/index.html` |
+| **New agent version (for review)** | `https://alexmmanansala-ctrl.github.io/Thankyou/agents/` | `agents/index.html` |
+
+The new versions are drafts for Jared to review; the current page has not been changed or
+replaced. Once approved, the new client version can take the place of `index.html`.
 
 Both pages share one stylesheet and script in **`assets/`**. Images are in **`images/`**,
 the PTPHomePage guide is in **`files/`**, and **`jared-fenn-team.vcf`** is the
