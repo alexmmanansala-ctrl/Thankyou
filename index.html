@@ -24,267 +24,10 @@
   <meta name="twitter:description" content="Your report, next steps, and helpful services after your home inspection.">
   <meta name="twitter:image" content="https://thankyou.jaredfennteam.com/images/og-image.jpg">
 
-  <style>
-    :root {
-      /* ===== BRAND SETTINGS =====
-         Sampled from the Pillar To Post / Jared Fenn Team logo and website. */
-      --brand-primary: #013a81;    /* navy (logo): headings, links, outline buttons, footer */
-      --brand-accent: #7ac143;     /* green (logo): decorative stripes and bars only, no text on it */
-      --brand-cta: #4aa640;        /* green of the website's "Book Online Now" buttons: main action buttons */
-      --on-brand-primary: #ffffff; /* text on navy */
-      --on-brand-cta: #111111;     /* dark text on green buttons, as on the website */
-
-      --text: #1b1f24;
-      --text-muted: #46505c;
-      --bg: #f3f5f8;
-      --surface: #ffffff;
-      --border: #d3dae4;
-      --radius: 14px;
-      --gutter: 1rem;
-    }
-
-    *, *::before, *::after { box-sizing: border-box; }
-    [hidden] { display: none !important; }
-
-    html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
-    @media (prefers-reduced-motion: no-preference) {
-      html { scroll-behavior: smooth; }
-    }
-
-    body {
-      margin: 0;
-      background: var(--bg);
-      color: var(--text);
-      font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-      font-size: 1.125rem; /* 18px */
-      line-height: 1.6;
-    }
-
-    img, svg, iframe { display: block; max-width: 100%; }
-    h1, h2, h3 { line-height: 1.25; margin: 0 0 0.5em; text-wrap: balance; color: var(--brand-primary); }
-    p { margin: 0 0 1em; }
-    ul, ol { margin: 0; padding: 0; }
-
-    a { color: var(--brand-primary); text-underline-offset: 0.15em; text-decoration-thickness: 0.08em; }
-    .tel { font-weight: 700; white-space: nowrap; }
-
-    :focus-visible { outline: 3px solid var(--text); outline-offset: 3px; }
-
-    .wrap { max-width: 42rem; margin: 0 auto; padding-left: var(--gutter); padding-right: var(--gutter); }
-
-    .skip-link {
-      position: absolute; left: 0.5rem; top: -4rem; z-index: 10;
-      background: var(--surface); color: var(--text); padding: 0.75rem 1rem;
-      border-radius: 0.5rem; font-weight: 700;
-    }
-    .skip-link:focus { top: 0.5rem; }
-
-    .icon {
-      width: 1.25rem; height: 1.25rem; flex: none;
-      fill: none; stroke: currentColor; stroke-width: 2;
-      stroke-linecap: round; stroke-linejoin: round;
-    }
-
-    /* ---------- Header ---------- */
-    .site-header {
-      background: var(--surface);
-      border-top: 6px solid var(--brand-accent);
-      border-bottom: 1px solid var(--border);
-    }
-    .brand {
-      display: flex; flex-direction: column; align-items: center; gap: 0.375rem;
-      padding-top: 1.25rem; padding-bottom: 1rem; text-align: center;
-    }
-    .logo { width: 15rem; max-width: 80%; height: auto; }
-    .tagline { margin: 0; font-size: 1rem; font-weight: 600; letter-spacing: 0.02em; color: var(--text-muted); }
-
-    /* ---------- Intro ---------- */
-    .intro { padding-top: 1.75rem; }
-    .intro h1 { font-size: 1.875rem; }
-    .note {
-      background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius);
-      padding: 1.25rem; box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
-    }
-    .note > :last-child { margin-bottom: 0; }
-    .ask { margin-top: 1rem; border-top: 4px solid var(--brand-accent); }
-    .ask-title { font-size: 1.375rem; }
-    .bookmark-tip { margin: 1.25rem 0 0; color: var(--text-muted); }
-    .note-from { display: flex; align-items: center; gap: 0.875rem; margin-bottom: 0.875rem; }
-    .avatar {
-      width: 4.5rem; height: 4.5rem; border-radius: 50%; object-fit: cover; flex: none;
-      border: 3px solid var(--brand-accent);
-    }
-    .note-name { margin: 0; font-size: 1.25rem; font-weight: 800; color: var(--brand-primary); line-height: 1.2; }
-    .note-role { margin: 0; font-size: 1rem; color: var(--text-muted); line-height: 1.35; }
-
-    .jump { margin-top: 1.5rem; }
-    .jump-label { margin: 0 0 0.5rem; font-size: 1rem; font-weight: 700; color: var(--text-muted); }
-    .jump ul { list-style: none; display: grid; grid-template-columns: 1fr 1fr; gap: 0.625rem; }
-    .jump a {
-      display: flex; align-items: center; min-height: 3rem; padding: 0.5rem 0.875rem;
-      background: var(--surface); border: 1px solid var(--border); border-radius: 0.75rem;
-      color: var(--text); font-weight: 600; text-decoration: none; line-height: 1.25;
-    }
-
-    /* ---------- Sections ---------- */
-    .section { padding-top: 2.5rem; }
-    [id] { scroll-margin-top: 1rem; }
-    .section > h2 { display: flex; gap: 0.625rem; font-size: 1.5rem; }
-    .section > h2::before {
-      content: ""; flex: none; width: 0.375rem;
-      background: var(--brand-accent); border-radius: 99px;
-    }
-    .lead { color: var(--text-muted); }
-
-    .card {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      padding: 1.25rem;
-      box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
-    }
-    .card + .card, .card-list > li + li { margin-top: 1rem; }
-    .card h3 { font-size: 1.25rem; }
-    .card > :last-child { margin-bottom: 0; }
-    .card-list { list-style: none; }
-
-    .subhead { margin-top: 2rem; font-size: 1.25rem; }
-
-    .card-photo {
-      width: calc(100% + 2.5rem); max-width: none; height: auto; aspect-ratio: 16 / 10; object-fit: cover;
-      margin: -1.25rem -1.25rem 1rem; border-radius: var(--radius) var(--radius) 0 0;
-    }
-    .section-photo {
-      width: 100%; height: auto; aspect-ratio: 16 / 9; object-fit: cover;
-      border-radius: var(--radius); margin-bottom: 1rem;
-    }
-
-    /* ---------- Buttons ---------- */
-    .btn {
-      display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem;
-      min-height: 3rem; padding: 0.75rem 1rem;
-      border: 2px solid var(--brand-primary); border-radius: 0.75rem;
-      font: inherit; font-weight: 700; line-height: 1.2; text-align: center; text-decoration: none;
-      cursor: pointer;
-    }
-    .btn-primary { background: var(--brand-cta); border-color: var(--brand-cta); color: var(--on-brand-cta); }
-    .btn-secondary { background: var(--surface); color: var(--brand-primary); }
-    @media (hover: hover) {
-      .btn-primary:hover { box-shadow: inset 0 0 0 999px rgba(255, 255, 255, 0.18); }
-      .btn-secondary:hover, .jump a:hover { background: var(--bg); }
-    }
-    .btn-block { display: flex; width: 100%; }
-    .btn-pair { display: flex; gap: 0.75rem; }
-    .btn-pair > .btn { flex: 1 1 0; }
-    .card .btn-pair, .card .btn-block { margin-top: 1rem; }
-
-    .status { margin: 0.75rem 0 0; font-weight: 600; }
-    .status:empty { margin: 0; }
-
-    /* ---------- Report ---------- */
-    .notice { display: flex; gap: 0.875rem; }
-    .notice-icon {
-      flex: none; width: 2.75rem; height: 2.75rem; border-radius: 50%;
-      display: grid; place-items: center;
-      background: var(--bg); color: var(--brand-primary);
-    }
-    .notice-icon .icon { width: 1.5rem; height: 1.5rem; }
-
-    .video {
-      position: relative; aspect-ratio: 16 / 9; margin-bottom: 0.75rem;
-      border-radius: var(--radius); overflow: hidden; background: var(--brand-primary);
-    }
-    @supports not (aspect-ratio: 1) {
-      .video { height: 0; padding-top: 56.25%; }
-    }
-    .video iframe, .video-facade { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
-    .video-facade {
-      display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 0.75rem;
-      padding: 1rem; text-align: center; text-decoration: none; font-weight: 700; color: #fff;
-      background: linear-gradient(135deg, var(--brand-primary), #00244f);
-    }
-    .play-btn {
-      width: 4.5rem; height: 4.5rem; border-radius: 50%;
-      display: grid; place-items: center;
-      background: #fff; color: var(--brand-primary);
-      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
-    }
-    .play-btn .icon { width: 2rem; height: 2rem; margin-left: 0.25rem; fill: currentColor; stroke: none; }
-    .video-alt { font-size: 1rem; }
-
-    /* ---------- Collapsible services ---------- */
-    .service-list details {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-    }
-    .service-list details + details { margin-top: 0.75rem; }
-    .service-list summary {
-      display: flex; align-items: center; gap: 1rem;
-      min-height: 3.5rem; padding: 1rem 1.25rem;
-      cursor: pointer; list-style: none;
-    }
-    .service-list summary::-webkit-details-marker { display: none; }
-    .service-list summary::after {
-      content: ""; flex: none; width: 2rem; height: 2rem; border-radius: 50%;
-      border: 2px solid var(--brand-primary);
-      background:
-        linear-gradient(var(--brand-primary), var(--brand-primary)) center / 0.875rem 2px no-repeat,
-        linear-gradient(var(--brand-primary), var(--brand-primary)) center / 2px 0.875rem no-repeat;
-    }
-    .service-list details[open] > summary::after {
-      background: linear-gradient(var(--brand-primary), var(--brand-primary)) center / 0.875rem 2px no-repeat;
-    }
-    .summary-text { flex: 1; }
-    .summary-title { display: block; font-size: 1.1875rem; font-weight: 700; line-height: 1.3; color: var(--brand-primary); }
-    .summary-hint { display: block; font-size: 1rem; color: var(--text-muted); line-height: 1.4; margin-top: 0.125rem; }
-    .details-body { padding: 0 1.25rem 1.25rem; }
-    .details-body .btn { margin-top: 0.25rem; }
-
-    /* ---------- PTPConnects steps ---------- */
-    .steps { list-style: none; counter-reset: step; margin: 0.5rem 0 1.25rem; }
-    .steps li { counter-increment: step; position: relative; padding-left: 3.25rem; min-height: 2.5rem; }
-    .steps li + li { margin-top: 1rem; }
-    .steps li::before {
-      content: counter(step);
-      position: absolute; left: 0; top: 0;
-      width: 2.25rem; height: 2.25rem; border-radius: 50%;
-      display: grid; place-items: center;
-      background: var(--brand-primary); color: var(--on-brand-primary); font-weight: 800;
-    }
-    .steps strong { display: block; font-size: 1.1875rem; color: var(--brand-primary); }
-
-    /* ---------- Review ---------- */
-    .review-card { text-align: center; }
-    .review-card .btn-block { margin-top: 0; }
-
-    /* ---------- Footer ---------- */
-    .site-footer {
-      margin-top: 3rem; padding: 2.25rem 0 2.75rem;
-      background: var(--brand-primary); color: var(--on-brand-primary);
-    }
-    .site-footer h2 { font-size: 1.5rem; color: inherit; }
-    .site-footer a { color: inherit; }
-    .site-footer :focus-visible { outline-color: var(--on-brand-primary); }
-    .site-footer address { font-style: normal; }
-    .footer-name { margin: 0 0 0.5rem; font-size: 1.25rem; font-weight: 800; }
-    .contact-list { list-style: none; margin-bottom: 1.5rem; }
-    .contact-list a {
-      display: flex; align-items: center; gap: 0.75rem; min-height: 3rem;
-      font-weight: 600; overflow-wrap: anywhere;
-    }
-    .office { display: flex; gap: 0.75rem; margin-bottom: 1.5rem; }
-    .office .icon { margin-top: 0.2rem; }
-    .office p { margin: 0; }
-    .social { list-style: none; display: flex; flex-wrap: wrap; gap: 0.75rem; }
-    .social a {
-      display: inline-flex; align-items: center; min-height: 3rem; padding: 0.5rem 1.125rem;
-      border: 2px solid currentColor; border-radius: 0.75rem;
-      font-weight: 700; text-decoration: none;
-    }
-  </style>
+  <link rel="stylesheet" href="assets/site.css">
+  <!-- GOOGLE ANALYTICS: paste the snippet here (see README) -->
 </head>
-<body>
+<body data-page="client">
   <a class="skip-link" href="#main">Skip to main content</a>
 
   <!-- Icon set (used throughout the page via <use>) -->
@@ -295,11 +38,11 @@
     <symbol id="i-mail" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 6-10 7L2 6"/></symbol>
     <symbol id="i-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></symbol>
     <symbol id="i-pin" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></symbol>
-    <symbol id="i-copy" viewBox="0 0 24 24"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></symbol>
     <symbol id="i-share" viewBox="0 0 24 24"><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8M16 6l-4-4-4 4M12 2v13"/></symbol>
     <symbol id="i-star" viewBox="0 0 24 24"><path d="m12 2 3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></symbol>
     <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></symbol>
     <symbol id="i-play" viewBox="0 0 24 24"><path d="M6 3.5v17a1 1 0 0 0 1.5.86l14-8.5a1 1 0 0 0 0-1.72l-14-8.5A1 1 0 0 0 6 3.5z"/></symbol>
+    <symbol id="i-user-plus" viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="8.5" cy="7" r="4"/><path d="M20 8v6M23 11h-6"/></symbol>
   </svg>
 
   <header class="site-header">
@@ -310,9 +53,9 @@
   </header>
 
   <main id="main">
-    <!-- 1. Greeting -->
+    <!-- 1. Thank you -->
     <section class="wrap intro" aria-labelledby="greeting">
-      <h1 id="greeting">Thanks for trusting us with your home inspection.</h1>
+      <h1 id="greeting">Thank you for trusting us with your home inspection.</h1>
       <div class="note">
         <div class="note-from">
           <img class="avatar" src="images/jared.jpg" width="320" height="320" alt="Jared Fenn">
@@ -321,12 +64,12 @@
             <p class="note-role">The Jared Fenn Team</p>
           </div>
         </div>
-        <p>We help homeowners, not just homebuyers, so we're here for you long after closing day.</p>
+        <p>It was a pleasure working with you. We help homeowners, not just homebuyers, so think of us as your go-to for anything home, for as long as you own it.</p>
       </div>
 
-      <!-- Website chat assistant -->
+      <!-- 2. Stay connected -->
       <div class="card ask" id="ask">
-        <h2 class="ask-title">Questions? Just chat with us.</h2>
+        <h2 class="ask-title">We're here for all things home.</h2>
         <div class="notice">
           <span class="notice-icon"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-message"/></svg></span>
           <div>
@@ -334,116 +77,111 @@
             <p><strong>Anytime after:</strong> whenever a question comes up, even years from now, our team is just a chat away on our website.</p>
           </div>
         </div>
-        <a class="btn btn-primary btn-block" href="https://jaredfennteam.pillartopost.com/">
-          <svg class="icon" aria-hidden="true" focusable="false"><use href="#i-globe"/></svg>Visit our website
-        </a>
+        <div class="connect-actions">
+          <a class="btn btn-primary" href="https://jaredfennteam.pillartopost.com/?utm_source=thankyou-page&amp;utm_medium=sms&amp;utm_campaign=client" data-track="visit_website">
+            <svg class="icon" aria-hidden="true" focusable="false"><use href="#i-globe"/></svg>Visit our website
+          </a>
+          <a class="btn btn-secondary" href="jared-fenn-team.vcf" download="Jared Fenn Team.vcf" data-track="save_contact">
+            <svg class="icon" aria-hidden="true" focusable="false"><use href="#i-user-plus"/></svg>Save our contact
+          </a>
+        </div>
+        <p class="follow">
+          <span class="follow-label">Follow along:</span>
+          <a href="https://www.facebook.com/jaredfennteam" data-track="facebook">Facebook</a>
+          <a href="https://www.instagram.com/jaredfenn.ptp" data-track="instagram">Instagram</a>
+        </p>
       </div>
 
       <p class="bookmark-tip">Everything else you need is below. <strong>Bookmark this page</strong> so it's easy to find.</p>
-
-      <nav class="jump" aria-labelledby="jump-label">
-        <p class="jump-label" id="jump-label">Jump to:</p>
-        <ul role="list">
-          <li><a href="#report">Your report</a></li>
-          <li><a href="#before-closing">Before closing</a></li>
-          <li><a href="#services">More services</a></li>
-          <li><a href="#moving-in">Moving in</a></li>
-          <li><a href="#agents">For agents</a></li>
-          <li><a href="#contact">Contact us</a></li>
-        </ul>
-      </nav>
     </section>
 
-    <!-- 2. Your report -->
-    <section class="wrap section" id="report" aria-labelledby="report-title">
-      <h2 id="report-title">Your report</h2>
-      <div class="card">
-        <div class="notice">
-          <span class="notice-icon"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-mail"/></svg></span>
-          <div>
-            <p><strong>It's in your email</strong> from Pillar To Post. Not there? Check your spam folder.</p>
-            <p>Still can't find it? Reach out: <a class="tel" href="tel:+18013189909">801-318-9909</a>.</p>
+    <!-- 3. Report help (collapsed) -->
+    <section class="wrap section" id="report" aria-label="Your report">
+      <details class="card fold">
+        <summary>
+          <span class="summary-text">
+            <span class="summary-title">Can't find your report?</span>
+            <span class="summary-hint">Plus a quick guide to PTPHomePage</span>
+          </span>
+        </summary>
+        <div class="fold-body">
+          <p>It was emailed to you from Pillar To Post. Check your spam folder, or reach out: <a class="tel" href="tel:+18013189909">801-318-9909</a>.</p>
+          <div class="btn-pair">
+            <a class="btn btn-primary" href="sms:+18013189909?&amp;body=Hi!%20I%20can%27t%20find%20my%20inspection%20report%20email." aria-label="Text us at 801-318-9909" data-track="report_text">
+              <svg class="icon" aria-hidden="true" focusable="false"><use href="#i-message"/></svg>Text us
+            </a>
+            <a class="btn btn-secondary" href="tel:+18013189909" aria-label="Call us at 801-318-9909" data-track="report_call">
+              <svg class="icon" aria-hidden="true" focusable="false"><use href="#i-phone"/></svg>Call us
+            </a>
           </div>
-        </div>
-        <div class="btn-pair">
-          <a class="btn btn-primary" href="sms:+18013189909?&amp;body=Hi!%20I%20can%27t%20find%20my%20inspection%20report%20email." aria-label="Text us at 801-318-9909">
-            <svg class="icon" aria-hidden="true" focusable="false"><use href="#i-message"/></svg>Text us
+          <div class="video">
+            <!-- Tapping loads the Vimeo player. Without JavaScript, this opens the video on Vimeo. -->
+            <a class="video-facade" href="https://vimeo.com/1052152309" data-vimeo-id="1052152309" data-title="PTPHomePage intro video" data-track="video_play">
+              <span class="play-btn"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-play"/></svg></span>
+              <span>Watch the PTPHomePage intro</span>
+            </a>
+          </div>
+          <a class="btn btn-secondary btn-block" href="files/PTPHomePage-Step-by-Step-Guide.pdf" data-track="guide_pdf">
+            Step-by-step guide (PDF)<svg class="icon" aria-hidden="true" focusable="false"><use href="#i-arrow"/></svg>
           </a>
-          <a class="btn btn-secondary" href="tel:+18013189909" aria-label="Call us at 801-318-9909">
-            <svg class="icon" aria-hidden="true" focusable="false"><use href="#i-phone"/></svg>Call us
-          </a>
         </div>
-      </div>
-
-      <h3 class="subhead">Getting around PTPHomePage</h3>
-      <p>Watch the short intro, or open the step-by-step guide.</p>
-      <div class="video">
-        <!-- Tapping loads the Vimeo player. Without JavaScript, this opens the video on Vimeo. -->
-        <a class="video-facade" href="https://vimeo.com/1052152309" data-vimeo-id="1052152309" data-title="PTPHomePage intro video">
-          <span class="play-btn"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-play"/></svg></span>
-          <span>Play the PTPHomePage intro video</span>
-        </a>
-      </div>
-      <p class="video-alt">Trouble playing it? <a href="https://vimeo.com/1052152309">Watch it on Vimeo</a>.</p>
-      <a class="btn btn-secondary btn-block" href="files/PTPHomePage-Step-by-Step-Guide.pdf">
-        Open the step-by-step guide (PDF)<svg class="icon" aria-hidden="true" focusable="false"><use href="#i-arrow"/></svg>
-      </a>
+      </details>
     </section>
 
-    <!-- 3. Due diligence tests -->
+    <!-- 4. Before closing -->
     <section class="wrap section" id="before-closing" aria-labelledby="before-closing-title">
-      <h2 id="before-closing-title">Still in your due diligence period?</h2>
-      <p class="lead">These are best done before closing.</p>
-
-      <article class="card" aria-labelledby="sewer-title">
-        <img class="card-photo" src="images/sewer-scope.jpg" width="1200" height="751" loading="lazy" alt="Jared running a sewer scope camera through a roof vent">
-        <h3 id="sewer-title">Sewer scope</h3>
-        <p>A camera checks the main sewer line for cracks, blockages, and tree roots: problems you can't see from inside the home.</p>
-        <div class="btn-pair">
-          <a class="btn btn-primary" href="https://jaredfennteam.pillartopost.com/fbo-booking/" aria-label="Book a sewer scope online">
+      <h2 id="before-closing-title">Still before closing?</h2>
+      <p class="lead">These are best done during your due diligence period.</p>
+      <ul class="card rows" role="list">
+        <li class="row">
+          <img class="row-thumb" src="images/sewer-scope.jpg" width="1200" height="751" loading="lazy" alt="">
+          <h3 class="row-title">Sewer scope</h3>
+          <p class="row-text">A camera checks the main sewer line for cracks, roots, and blockages.</p>
+          <a class="btn btn-primary" href="https://jaredfennteam.pillartopost.com/fbo-booking/?utm_source=thankyou-page&amp;utm_medium=sms&amp;utm_campaign=client" aria-label="Book a sewer scope" data-track="book_sewer">
             <svg class="icon" aria-hidden="true" focusable="false"><use href="#i-calendar"/></svg>Book
           </a>
-          <a class="btn btn-secondary" href="tel:+18013189909" aria-label="Call 801-318-9909 about a sewer scope">
-            <svg class="icon" aria-hidden="true" focusable="false"><use href="#i-phone"/></svg>Call
-          </a>
-        </div>
-      </article>
-
-      <article class="card" aria-labelledby="radon-title">
-        <img class="card-photo" src="images/radon-test.jpg" width="1200" height="750" loading="lazy" alt="A radon monitor on a tripod next to a Radon Test In Progress sign">
-        <h3 id="radon-title">Radon testing</h3>
-        <p>About 1 in 3 Utah homes have elevated radon. You can't see or smell it, so testing is the only way to know. The EPA recommends testing every two years.</p>
-        <div class="btn-pair">
-          <a class="btn btn-primary" href="https://jaredfennteam.pillartopost.com/fbo-booking/" aria-label="Book radon testing online">
+        </li>
+        <li class="row">
+          <img class="row-thumb" src="images/radon-test.jpg" width="1200" height="750" loading="lazy" alt="">
+          <h3 class="row-title">Radon testing</h3>
+          <p class="row-text">About 1 in 3 Utah homes have elevated radon. The EPA recommends testing every two years.</p>
+          <a class="btn btn-primary" href="https://jaredfennteam.pillartopost.com/fbo-booking/?utm_source=thankyou-page&amp;utm_medium=sms&amp;utm_campaign=client" aria-label="Book radon testing" data-track="book_radon">
             <svg class="icon" aria-hidden="true" focusable="false"><use href="#i-calendar"/></svg>Book
           </a>
-          <a class="btn btn-secondary" href="tel:+18013189909" aria-label="Call 801-318-9909 about radon testing">
-            <svg class="icon" aria-hidden="true" focusable="false"><use href="#i-phone"/></svg>Call
-          </a>
-        </div>
-      </article>
-
-      <article class="card" aria-labelledby="meth-title">
-        <img class="card-photo" src="images/meth-test.jpg" width="1200" height="750" loading="lazy" alt="An inspector checking under a bathroom vanity">
-        <h3 id="meth-title">Meth testing</h3>
-        <p>In Utah, contamination often comes from use or smoking, not manufacturing, and residue can linger for years. A quick test gives you peace of mind.</p>
-        <div class="btn-pair">
-          <a class="btn btn-primary" href="https://jaredfennteam.pillartopost.com/fbo-booking/" aria-label="Book meth testing online">
+        </li>
+        <li class="row">
+          <img class="row-thumb" src="images/meth-test.jpg" width="1200" height="750" loading="lazy" alt="">
+          <h3 class="row-title">Meth testing</h3>
+          <p class="row-text">Residue from past use can linger for years. A quick test gives you peace of mind.</p>
+          <a class="btn btn-primary" href="https://jaredfennteam.pillartopost.com/fbo-booking/?utm_source=thankyou-page&amp;utm_medium=sms&amp;utm_campaign=client" aria-label="Book meth testing" data-track="book_meth">
             <svg class="icon" aria-hidden="true" focusable="false"><use href="#i-calendar"/></svg>Book
           </a>
-          <a class="btn btn-secondary" href="tel:+18013189909" aria-label="Call 801-318-9909 about meth testing">
-            <svg class="icon" aria-hidden="true" focusable="false"><use href="#i-phone"/></svg>Call
-          </a>
-        </div>
-      </article>
+        </li>
+      </ul>
+      <p class="rows-foot">Questions first? Call <a class="tel" href="tel:+18013189909" data-track="services_call">801-318-9909</a>.</p>
     </section>
 
-    <!-- 4. More services (collapsible) -->
+    <!-- 5. For the life of your home -->
     <section class="wrap section" id="services" aria-labelledby="services-title">
-      <h2 id="services-title">More services for your home</h2>
-      <p class="lead">Tap a service to learn more.</p>
+      <h2 id="services-title">For the life of your home</h2>
+      <p class="lead">Helpful now or years from now. Tap to learn more.</p>
 
       <div class="service-list">
+        <details>
+          <summary>
+            <span class="summary-text">
+              <span class="summary-title">Moving in? PTPConnects</span>
+              <span class="summary-hint">Free utility and home-service setup</span>
+            </span>
+          </summary>
+          <div class="details-body">
+            <p>One call and a concierge sets up your utilities and home services, compares providers for you, and saves you a dozen separate calls.</p>
+            <a class="btn btn-primary btn-block" href="tel:+18332429846" aria-label="Call 833-242-9846 to reach PTPConnects" data-track="ptpconnects_call">
+              <svg class="icon" aria-hidden="true" focusable="false"><use href="#i-phone"/></svg>Call 833-242-9846
+            </a>
+          </div>
+        </details>
+
         <details>
           <summary>
             <span class="summary-text">
@@ -452,8 +190,8 @@
             </span>
           </summary>
           <div class="details-body">
-            <p>Mold testing checks whether mold levels inside the home are higher than normal. It's worth considering if you notice a musty smell, see signs of past water damage, or someone in the home has allergies or asthma.</p>
-            <a class="btn btn-primary btn-block" href="https://jaredfennteam.pillartopost.com/fbo-booking/">
+            <p>Checks whether mold levels inside the home are higher than normal. Worth considering if you notice a musty smell, signs of past water damage, or allergies in the home.</p>
+            <a class="btn btn-primary btn-block" href="https://jaredfennteam.pillartopost.com/fbo-booking/?utm_source=thankyou-page&amp;utm_medium=sms&amp;utm_campaign=client" data-track="book_mold">
               <svg class="icon" aria-hidden="true" focusable="false"><use href="#i-calendar"/></svg>Book mold testing
             </a>
           </div>
@@ -467,8 +205,8 @@
             </span>
           </summary>
           <div class="details-body">
-            <p>We test the air inside your home for mold spores, VOCs (chemicals given off by things like paint, flooring, and furniture), formaldehyde, and common allergens. It's especially helpful for anyone with allergies, asthma, or other sensitivities.</p>
-            <a class="btn btn-primary btn-block" href="https://jaredfennteam.pillartopost.com/fbo-booking/">
+            <p>Tests indoor air for mold spores, VOCs (chemicals from things like paint, flooring, and furniture), formaldehyde, and common allergens.</p>
+            <a class="btn btn-primary btn-block" href="https://jaredfennteam.pillartopost.com/fbo-booking/?utm_source=thankyou-page&amp;utm_medium=sms&amp;utm_campaign=client" data-track="book_air">
               <svg class="icon" aria-hidden="true" focusable="false"><use href="#i-calendar"/></svg>Book air quality testing
             </a>
           </div>
@@ -482,8 +220,8 @@
             </span>
           </summary>
           <div class="details-body">
-            <p>We take baseline measurements of your home's floor elevations so any settling can be tracked over time. If questions ever come up down the road, you'll have a clear starting point to compare against.</p>
-            <a class="btn btn-primary btn-block" href="https://jaredfennteam.pillartopost.com/fbo-booking/">
+            <p>Baseline measurements of your floor elevations, so any settling can be tracked over time against a clear starting point.</p>
+            <a class="btn btn-primary btn-block" href="https://jaredfennteam.pillartopost.com/fbo-booking/?utm_source=thankyou-page&amp;utm_medium=sms&amp;utm_campaign=client" data-track="book_foundation">
               <svg class="icon" aria-hidden="true" focusable="false"><use href="#i-calendar"/></svg>Book a foundation survey
             </a>
           </div>
@@ -497,8 +235,8 @@
             </span>
           </summary>
           <div class="details-body">
-            <p>A thermal camera shows temperature differences the eye can't see. It helps spot hidden moisture, air leaks, and insulation gaps without opening up walls or ceilings.</p>
-            <a class="btn btn-primary btn-block" href="https://jaredfennteam.pillartopost.com/fbo-booking/">
+            <p>A thermal camera spots hidden moisture, air leaks, and insulation gaps without opening up walls or ceilings.</p>
+            <a class="btn btn-primary btn-block" href="https://jaredfennteam.pillartopost.com/fbo-booking/?utm_source=thankyou-page&amp;utm_medium=sms&amp;utm_campaign=client" data-track="book_infrared">
               <svg class="icon" aria-hidden="true" focusable="false"><use href="#i-calendar"/></svg>Book an infrared inspection
             </a>
           </div>
@@ -506,83 +244,24 @@
       </div>
     </section>
 
-    <!-- 5. PTPConnects -->
-    <section class="wrap section" id="moving-in" aria-labelledby="moving-in-title">
-      <h2 id="moving-in-title">Moving in? Let PTPConnects help.</h2>
-      <div class="card">
-        <p>A free concierge that sets up your utilities and home services.</p>
-        <ol class="steps" role="list">
-          <li><strong>One call</strong>One person sets everything up for you.</li>
-          <li><strong>Shop the best deals</strong>Compare providers in one place.</li>
-          <li><strong>Save time and money</strong>Skip a dozen separate calls.</li>
-        </ol>
-        <a class="btn btn-primary btn-block" href="tel:+18332429846" aria-label="Call 833-242-9846 to reach PTPConnects">
-          <svg class="icon" aria-hidden="true" focusable="false"><use href="#i-phone"/></svg>Call 833-242-9846
-        </a>
-      </div>
-    </section>
-
-    <!-- 6. For agents (thankyou.jaredfennteam.com/#agents opens here) -->
-    <section class="wrap section" id="agents" aria-labelledby="agents-title">
-      <h2 id="agents-title">For agents</h2>
-      <p class="lead">Thank you for trusting us with your client. We never take a referral for granted.</p>
-
-      <ul class="card-list" role="list">
-        <li class="card">
-          <h3>Book add-on services</h3>
-          <p>Schedule a sewer scope, radon or meth test, or any of our other services for your client.</p>
-          <a class="btn btn-primary btn-block" href="https://jaredfennteam.pillartopost.com/fbo-booking/">
-            <svg class="icon" aria-hidden="true" focusable="false"><use href="#i-calendar"/></svg>Book a service
-          </a>
-        </li>
-
-        <li class="card">
-          <h3>Share this page with your client</h3>
-          <p>One link with where to find their report, next steps, and services.</p>
-          <div class="btn-pair">
-            <button class="btn btn-primary" type="button" data-action="share" data-target="page" data-status="agent-share-status" data-share-only hidden>
-              <svg class="icon" aria-hidden="true" focusable="false"><use href="#i-share"/></svg>Share
-            </button>
-            <button class="btn btn-secondary" type="button" data-action="copy" data-target="page" data-status="agent-share-status">
-              <svg class="icon" aria-hidden="true" focusable="false"><use href="#i-copy"/></svg>Copy link
-            </button>
-          </div>
-          <p class="status" id="agent-share-status" role="status" aria-live="polite"></p>
-        </li>
-
-        <li class="card">
-          <h3>Upcoming CE classes</h3>
-          <p>See what's coming up and save your seat.</p>
-          <a class="btn btn-secondary btn-block" href="https://www.jotform.com/form/253055902294457">
-            View CE classes<svg class="icon" aria-hidden="true" focusable="false"><use href="#i-arrow"/></svg>
-          </a>
-        </li>
-      </ul>
-    </section>
-
-    <!-- 7. Review + referral -->
+    <!-- 6. Review + referral -->
     <section class="wrap section" id="review" aria-labelledby="review-title">
       <h2 id="review-title">Did we take good care of you?</h2>
-      <img class="section-photo" src="images/team-trucks.jpg" width="1200" height="675" loading="lazy" alt="Jared Fenn Team inspection vehicles parked on a Utah street">
       <div class="card review-card">
-        <p>If you have a minute, a quick Google review would mean a lot to us. It helps other Utah families find an inspector they can trust.</p>
-        <a class="btn btn-primary btn-block" href="https://g.page/r/CSsFhEzRfLVyEAI/review">
+        <p>A quick Google review would mean a lot to us, and it helps other Utah families find an inspector they can trust.</p>
+        <a class="btn btn-primary btn-block" href="https://g.page/r/CSsFhEzRfLVyEAI/review" data-track="google_review">
           <svg class="icon" aria-hidden="true" focusable="false"><use href="#i-star"/></svg>Leave a Google review
         </a>
-      </div>
-
-      <div class="card">
-        <h3>Know someone buying or selling?</h3>
-        <p>We'd love to help them too. Share our info, or pass along our number: <a class="tel" href="tel:+18013189909">801-318-9909</a>.</p>
-        <button class="btn btn-secondary btn-block" type="button" data-action="share" data-target="team" data-status="referral-status">
-          <svg class="icon" aria-hidden="true" focusable="false"><use href="#i-share"/></svg>Share our info
+        <p class="fine" style="margin: 1.25rem 0 0.5rem">Know someone buying or selling? We'd love to help them too.</p>
+        <button class="btn btn-secondary btn-block" type="button" data-action="share" data-target="team" data-status="referral-status" data-track="share_referral">
+          <svg class="icon" aria-hidden="true" focusable="false"><use href="#i-share"/></svg>Share us with a friend
         </button>
         <p class="status" id="referral-status" role="status" aria-live="polite"></p>
       </div>
     </section>
   </main>
 
-  <!-- 8. Footer / contact -->
+  <!-- 7. Footer / contact -->
   <footer class="site-footer" id="contact">
     <div class="wrap">
       <h2>Contact us</h2>
@@ -590,138 +269,30 @@
         <p class="footer-name">The Jared Fenn Team</p>
         <ul class="contact-list" role="list">
           <li>
-            <a href="tel:+18013189909">
+            <a href="tel:+18013189909" data-track="footer_call">
               <svg class="icon" aria-hidden="true" focusable="false"><use href="#i-phone"/></svg>801-318-9909
             </a>
           </li>
           <li>
-            <a href="mailto:jaredfennteam@pillartopost.com">
+            <a href="mailto:jaredfennteam@pillartopost.com" data-track="footer_email">
               <svg class="icon" aria-hidden="true" focusable="false"><use href="#i-mail"/></svg>jaredfennteam@pillartopost.com
             </a>
           </li>
           <li>
-            <a href="https://www.jaredfennteam.com">
-              <svg class="icon" aria-hidden="true" focusable="false"><use href="#i-globe"/></svg>www.jaredfennteam.com
+            <a href="https://jaredfennteam.pillartopost.com/?utm_source=thankyou-page&amp;utm_medium=sms&amp;utm_campaign=client" data-track="footer_website">
+              <svg class="icon" aria-hidden="true" focusable="false"><use href="#i-globe"/></svg>jaredfennteam.pillartopost.com
             </a>
           </li>
         </ul>
-
         <div class="office">
           <svg class="icon" aria-hidden="true" focusable="false"><use href="#i-pin"/></svg>
           <p><strong>Pillar To Post</strong><br>51 W Center #215<br>Orem, UT 84057</p>
         </div>
       </address>
-
-      <ul class="social" role="list" aria-label="Follow us">
-        <li><a href="https://www.facebook.com/jaredfennteam">Facebook</a></li>
-        <li><a href="https://www.instagram.com/jaredfenn.ptp">Instagram</a></li>
-      </ul>
     </div>
   </footer>
 
-  <script>
-    (function () {
-      'use strict';
-
-      // Tap-to-play video: the Vimeo player only loads when someone taps it,
-      // which keeps the page fast on phones.
-      document.querySelectorAll('[data-vimeo-id]').forEach(function (link) {
-        link.addEventListener('click', function (event) {
-          event.preventDefault();
-          var frame = document.createElement('iframe');
-          frame.src = 'https://player.vimeo.com/video/' + link.getAttribute('data-vimeo-id') + '?autoplay=1&dnt=1';
-          frame.title = link.getAttribute('data-title') || 'Video';
-          frame.allow = 'autoplay; fullscreen; picture-in-picture';
-          frame.setAttribute('allowfullscreen', '');
-          link.parentNode.replaceChild(frame, link);
-        });
-      });
-
-      // Share and copy buttons.
-      // Always share the clean page link (no #agents), so clients land at the top.
-      var canonical = document.querySelector('link[rel="canonical"]');
-      var pageUrl = canonical ? canonical.href : location.origin + location.pathname;
-
-      var targets = {
-        page: {
-          title: 'Your Inspection Resources – Jared Fenn Team',
-          text: 'Your report, next steps, and helpful services after your home inspection.',
-          url: pageUrl,
-          copied: 'Link copied! Paste it into a text or email to your client.'
-        },
-        team: {
-          title: 'Jared Fenn Team',
-          text: 'Jared Fenn Team, Pillar To Post home inspectors in Utah. Call or text 801-318-9909.',
-          url: 'https://www.jaredfennteam.com',
-          copied: 'Copied! Paste it into a text or email to share.'
-        }
-      };
-
-      function copyText(text) {
-        if (navigator.clipboard && window.isSecureContext) {
-          return navigator.clipboard.writeText(text);
-        }
-        return new Promise(function (resolve, reject) {
-          var field = document.createElement('textarea');
-          field.value = text;
-          field.setAttribute('readonly', '');
-          field.style.position = 'fixed';
-          field.style.top = '0';
-          field.style.opacity = '0';
-          document.body.appendChild(field);
-          field.select();
-          field.setSelectionRange(0, text.length);
-          var ok = false;
-          try { ok = document.execCommand('copy'); } catch (e) { ok = false; }
-          document.body.removeChild(field);
-          if (ok) { resolve(); } else { reject(); }
-        });
-      }
-
-      function showStatus(button, message) {
-        var status = document.getElementById(button.getAttribute('data-status'));
-        if (!status) { return; }
-        status.textContent = message;
-        clearTimeout(status._timer);
-        status._timer = setTimeout(function () { status.textContent = ''; }, 6000);
-      }
-
-      function copyFor(button, target, text) {
-        copyText(text).then(function () {
-          showStatus(button, target.copied);
-        }, function () {
-          showStatus(button, 'Couldn’t copy automatically. The link is ' + target.url);
-        });
-      }
-
-      var canShare = typeof navigator.share === 'function';
-
-      document.querySelectorAll('[data-action]').forEach(function (button) {
-        var target = targets[button.getAttribute('data-target')];
-        if (!target) { return; }
-
-        if (button.hasAttribute('data-share-only')) {
-          button.hidden = !canShare;
-        }
-
-        button.addEventListener('click', function () {
-          if (button.getAttribute('data-action') === 'copy') {
-            copyFor(button, target, target.url);
-            return;
-          }
-          if (canShare) {
-            navigator.share({ title: target.title, text: target.text, url: target.url })
-              .catch(function (error) {
-                if (error && error.name === 'AbortError') { return; }
-                copyFor(button, target, target.text + ' ' + target.url);
-              });
-          } else {
-            copyFor(button, target, target.text + ' ' + target.url);
-          }
-        });
-      });
-    })();
-  </script>
+  <script src="assets/site.js"></script>
 <script async src="https://chat.evolvecustomers.com/widget.js" data-site-key="ptp-jaredfenn"></script>
 </body>
 </html>

@@ -1,9 +1,24 @@
 # Jared Fenn Team: Post-Inspection Resources Page
 
-This is the page clients and agents open from the text you send after every inspection.
-It will replace the Constant Contact page at **thankyou.jaredfennteam.com**.
+There are two versions, each sent as a text-message link after every inspection.
+They replace the Constant Contact page at **thankyou.jaredfennteam.com**.
 
-Everything lives in one file, **`index.html`**. Logos and images go in the **`images/`** folder.
+| Who | Link | File |
+|---|---|---|
+| **Clients** | `https://thankyou.jaredfennteam.com/` | `index.html` |
+| **Agents** | `https://thankyou.jaredfennteam.com/agents/` | `agents/index.html` |
+
+Both pages share one stylesheet and script in **`assets/`**. Images are in **`images/`**,
+the PTPHomePage guide is in **`files/`**, and **`jared-fenn-team.vcf`** is the
+"Save our contact" card.
+
+### Text templates
+
+**Client:**
+> Thank you for trusting us with your home inspection! Here's everything you need in one place, plus how to reach us anytime: https://thankyou.jaredfennteam.com/
+
+**Agent:**
+> Thank you for the referral! Here's a quick page to help take care of your client: https://thankyou.jaredfennteam.com/agents/
 
 - To put the page online, see **[HOSTING.md](HOSTING.md)**.
 - Brand colors, logo, link-preview image, and all links are set. No placeholders remain.
@@ -14,7 +29,9 @@ Everything lives in one file, **`index.html`**. Logos and images go in the **`im
 
 | Button / link | Goes to |
 |---|---|
-| All 8 "Book" buttons | https://jaredfennteam.pillartopost.com/fbo-booking/ |
+| All "Book" buttons (both pages) | https://jaredfennteam.pillartopost.com/fbo-booking/ (plus tracking tags) |
+| "Visit our website" and footer website link | https://jaredfennteam.pillartopost.com/ (plus tracking tags) |
+| "Save our contact" | `jared-fenn-team.vcf` (office line, email, website, address, Jared's photo) |
 | PTPConnects "Call 833-242-9846" | Dials 833-242-9846 |
 | All phone numbers on the page | Company line, 801-318-9909 |
 | Upcoming CE classes | https://www.jotform.com/form/253055902294457 |
@@ -24,8 +41,8 @@ Everything lives in one file, **`index.html`**. Logos and images go in the **`im
 | PTPHomePage intro video | https://vimeo.com/1052152309 |
 | PTPHomePage step-by-step guide | `files/PTPHomePage-Step-by-Step-Guide.pdf` (stored with the page; to update it, upload a new PDF with the same name to the `files` folder) |
 
-To change one later, search `index.html` for part of the old link (for example
-`fbo-booking` or `jotform`) and edit it there.
+To change one later, search `index.html` and `agents/index.html` for part of the old link
+(for example `fbo-booking` or `jotform`) and edit it there.
 
 ---
 
@@ -85,33 +102,52 @@ To upload images, go to the `images` folder on github.com and choose
 
 ## Final check before going live
 
-- [ ] Search `index.html` for `[`. No placeholders in square brackets should be left.
-- [ ] Open the page on your phone and tap every button: Book, Call, Text, the video, and the guide.
-- [ ] Make sure the PTPHomePage video plays on the page. If Vimeo's privacy settings block
-      embedding, the "Watch it on Vimeo" link under it still works. To allow embedding, go to
-      the video's settings on Vimeo, open **Privacy → Where can this be embedded?**, and choose
-      **Anywhere**.
-- [ ] Text the link to yourself and check the preview (title, description, image).
-- [ ] Open `https://thankyou.jaredfennteam.com/#agents` and confirm it jumps to the agent section.
+- [ ] Open both links on your phone and tap every button.
+- [ ] Tap **Save our contact** on an iPhone and an Android phone and check the contact looks right.
+- [ ] Make sure the PTPHomePage video plays (it's inside "Can't find your report?"). If Vimeo's
+      privacy settings block embedding, the video opens on Vimeo instead.
+- [ ] Text both links to yourself and check the previews (title, description, image).
 
 ---
 
-## What's on the page (for reference)
+## Tracking with Google Analytics
 
-1. Header and personal greeting, with quick "Jump to" buttons
-2. **Your report:** check email/spam, Text/Call buttons, PTPHomePage video and guide
-3. **Still in your due diligence period?** Sewer scope, Radon, and Meth testing (Book + Call)
-4. **More services:** Mold, Air quality, Foundation elevation survey, Infrared (tap to expand)
-5. **Moving in?** PTPConnects in three steps, with a button that calls 833-242-9846
-6. **For agents** (`#agents`): book add-ons, share/copy the page link, CE classes
-7. **Review + referral:** Google review button, plus "Share our info" for friends who are buying or selling
-8. **Footer:** phone, email, website, office address, Facebook, Instagram
+Every button already has a tracking name (`data-track="..."`, for example `book_sewer`,
+`save_contact`, `google_review`). Taps are sent to Google Analytics as events as soon as
+Analytics is added to the pages; until then nothing is sent.
 
-A few details:
-- The agent "Copy link" and "Share" buttons always share the plain page link (without
-  `#agents`), so clients land at the top.
-- "Share our info" in the referral section shares your main website, www.jaredfennteam.com.
-- On phones, a **Share** button appears next to "Copy link" that opens the phone's own share
-  menu (Messages, email, etc.). On computers that can't do this, only "Copy link" shows.
-- The video only loads when someone taps it, which keeps the page fast.
-- Pinch-to-zoom is allowed. Main text is 18px (nothing on the page is smaller than 16px), and buttons are at least 48px tall.
+1. In Google Analytics, create a **new property** (or a new web data stream) for
+   `thankyou.jaredfennteam.com`. Keep it separate from the website's, so the numbers don't mix.
+2. Copy its **Measurement ID** (starts with `G-`) and its install snippet.
+3. Paste the snippet where each page says `<!-- GOOGLE ANALYTICS: paste the snippet here -->`
+   (once in `index.html`, once in `agents/index.html`).
+4. In Analytics, **Reports → Engagement → Events** shows each button's taps. Every event carries
+   `page_version` (`client` or `agent`).
+
+Links to your website and booking page also carry `utm_source=thankyou-page` and
+`utm_campaign=client` or `agent`, so your website's Analytics can show which visits and
+bookings came from these pages.
+
+---
+
+## What's on each page (for reference)
+
+**Client page** (about 4 phone screens)
+1. Thank-you note from Jared
+2. **We're here for all things home:** chat today or on the website anytime, "Visit our website",
+   "Save our contact", Facebook and Instagram, then a "Bookmark this page" line
+3. **Can't find your report?** (tap to open): Text/Call the office, PTPHomePage video and PDF guide
+4. **Still before closing?** Sewer scope, Radon, Meth, each with a Book button
+5. **For the life of your home** (tap to expand): PTPConnects, Mold, Air quality, Foundation survey, Infrared
+6. **Did we take good care of you?** Google review, plus "Share us with a friend"
+7. Footer: office phone, email, website, address
+
+**Agent page** (about 3 phone screens)
+1. Thank-you note from Jared
+2. **Take care of your client:** book add-ons, send the client their page (Share / Copy link), CE classes
+3. **What your client gets beyond the inspection:** PTPHomePage, PTP360, PTPConnects,
+   Premium/Prestige extras, and ongoing chat help
+4. Footer
+
+All phone numbers go to the office line, 801-318-9909. Pinch-to-zoom is allowed, main text is
+18px (nothing smaller than 16px), and buttons are at least 48px tall.
