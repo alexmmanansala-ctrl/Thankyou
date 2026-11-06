@@ -258,50 +258,50 @@ a { color: var(--brand-primary); text-underline-offset: 0.15em; text-decoration-
   
 
 /* ---------- Stay connected ---------- */
-.connect-actions { display: grid; gap: 0.75rem; margin-top: 1rem; }
-.follow { display: flex; align-items: center; flex-wrap: wrap; gap: 0.5rem 1.25rem; margin: 1rem 0 0; font-size: 1rem; }
-.follow a { display: inline-flex; align-items: center; min-height: 2.75rem; font-weight: 700; }
-.follow-label { color: var(--text-muted); font-weight: 600; }
+.jf-connect-actions { display: grid; gap: 0.75rem; margin-top: 1rem; }
+.jf-follow { display: flex; align-items: center; flex-wrap: wrap; gap: 0.5rem 1.25rem; margin: 1rem 0 0; font-size: 1rem; }
+.jf-follow a { display: inline-flex; align-items: center; min-height: 2.75rem; font-weight: 700; }
+.jf-follow-label { color: var(--text-muted); font-weight: 600; }
 
 /* ---------- Collapsible card (report help) ---------- */
-.fold { padding: 0; }
-.fold > summary {
+.jf-fold { padding: 0; }
+.jf-fold > summary {
   display: flex; align-items: center; gap: 1rem; min-height: 3.5rem; padding: 1rem 1.25rem;
   cursor: pointer; list-style: none;
 }
-.fold > summary::-webkit-details-marker { display: none; }
-.fold > summary::after {
+.jf-fold > summary::-webkit-details-marker { display: none; }
+.jf-fold > summary::after {
   content: ""; flex: none; width: 2rem; height: 2rem; border-radius: 50%;
   border: 2px solid var(--brand-primary);
   background:
     linear-gradient(var(--brand-primary), var(--brand-primary)) center / 0.875rem 2px no-repeat,
     linear-gradient(var(--brand-primary), var(--brand-primary)) center / 2px 0.875rem no-repeat;
 }
-.fold[open] > summary::after {
+.jf-fold[open] > summary::after {
   background: linear-gradient(var(--brand-primary), var(--brand-primary)) center / 0.875rem 2px no-repeat;
 }
-.fold-body { padding: 0 1.25rem 1.25rem; }
-.fold-body .btn-pair { margin: 0 0 1.25rem; }
+.jf-fold-body { padding: 0 1.25rem 1.25rem; }
+.jf-fold-body .btn-pair { margin: 0 0 1.25rem; }
 
 /* ---------- Compact service rows ---------- */
-.rows { list-style: none; padding: 0.25rem 1.25rem; }
-.row {
+.jf-rows { list-style: none; padding: 0.25rem 1.25rem; }
+.jf-row {
   display: grid; grid-template-columns: 4rem 1fr; gap: 0.25rem 0.875rem; align-items: start;
   padding: 1rem 0;
 }
-.row + .row { border-top: 1px solid var(--border); }
-.row-thumb { grid-row: span 2; width: 4rem; height: 4rem; border-radius: 0.75rem; object-fit: cover; }
-.row-title { margin: 0; font-size: 1.1875rem; line-height: 1.3; }
-.row-text { margin: 0; font-size: 1rem; line-height: 1.45; color: var(--text-muted); }
-.row .btn { grid-column: 2; justify-self: start; margin-top: 0.5rem; min-width: 7rem; }
-.rows-foot { margin: 0.75rem 0 0; font-size: 1rem; color: var(--text-muted); }
+.jf-row + .jf-row { border-top: 1px solid var(--border); }
+.jf-row-thumb { grid-row: span 2; width: 4rem; height: 4rem; border-radius: 0.75rem; object-fit: cover; }
+.jf-row-title { margin: 0; font-size: 1.1875rem; line-height: 1.3; }
+.jf-row-text { margin: 0; font-size: 1rem; line-height: 1.45; color: var(--text-muted); }
+.jf-row .btn { grid-column: 2; justify-self: start; margin-top: 0.5rem; min-width: 7rem; }
+.jf-rows-foot { margin: 0.75rem 0 0; font-size: 1rem; color: var(--text-muted); }
 
 /* ---------- Agent perks ---------- */
-.perks { list-style: none; }
-.perks li { display: grid; grid-template-columns: 2.75rem 1fr; gap: 0.875rem; align-items: start; }
-.perks li + li { margin-top: 1rem; }
-.perks .notice-icon { width: 2.75rem; height: 2.75rem; }
-.perks strong { display: block; color: var(--brand-primary); line-height: 1.3; }
-.perks span { display: block; font-size: 1rem; color: var(--text-muted); line-height: 1.45; }
-.fine { font-size: 1rem; color: var(--text-muted); }
+.jf-perks { list-style: none; }
+.jf-perks li { display: grid; grid-template-columns: 2.75rem 1fr; gap: 0.875rem; align-items: start; }
+.jf-perks li + li { margin-top: 1rem; }
+.jf-perks .notice-icon { width: 2.75rem; height: 2.75rem; }
+.jf-perks strong { display: block; color: var(--brand-primary); line-height: 1.3; }
+.jf-perks span { display: block; font-size: 1rem; color: var(--text-muted); line-height: 1.45; }
+.jf-fine { font-size: 1rem; color: var(--text-muted); }
 
