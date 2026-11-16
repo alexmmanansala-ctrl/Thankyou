@@ -16,6 +16,20 @@ Both pages share one stylesheet and script in **`assets/`**. Images are in **`im
 the PTPHomePage guide is in **`files/`**, and **`jared-fenn-team.vcf`** is the
 "Save our contact" card.
 
+### CE class registration page (draft)
+
+A draft of the new CE class registration page is in **`classes/`** (`classes/index.html`).
+It is meant to replace the JotForm behind `classes.jaredfennteam.com`.
+
+- **It is a preview.** The form is not connected to Atlas yet, so it sends and saves nothing.
+  A yellow "Preview" notice shows at the top until `endpoint` is filled in.
+- **The class list** is in `classes/classes-data.js`, with instructions at the top of the file.
+  Classes drop off the page the day after they happen. Add `?preview=1` to the address to
+  also see past classes.
+- **Registered is not attended.** The page only records a sign-up. The CE banking master
+  list stays the source of truth for confirmed attendance and CE credit.
+- This folder is expected to move to its own repository once one exists.
+
 ### Text templates
 
 **Client:**
