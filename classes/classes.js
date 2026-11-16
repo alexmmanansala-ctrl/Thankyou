@@ -135,6 +135,7 @@
     $('jf-ce-pick-hint').hidden = true;
     $('details').hidden = true;
   }
+  if (upcoming.length === 1) { $('jf-ce-pick-hint').textContent = 'Tap the class to select it.'; }
   if (!data.endpoint) { $('jf-ce-preview').hidden = false; }
 
   function selected() {
